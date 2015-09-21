@@ -1,0 +1,56 @@
+
+
+#sidebar-first,
+#sidebar-second,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "adelle", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+
+.sidebars {
+    float: left;
+    width: 300px;
+    display: block;
+    background: #f0f0f0;
+}
+
+.sidebar .block {
+    border: 0;
+    background: inherit;
+}
+
+
+#page {
+    position: relative;
+}
+
+#main-menu {
+    height: 100%;
+    width: 15em;
+    border: red 1px solid;
+    left: -15em;
+    position: absolute;
+    overflow-y: hidden;
+
+    &.open {
+        left: 0;
+    }
+
+    #menu-bar {
+        display:block;
+        position: absolute;
+    }
+}
