@@ -11,6 +11,8 @@ stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/extras.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/navigation.js
+
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top

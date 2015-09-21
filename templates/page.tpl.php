@@ -89,27 +89,32 @@ error_reporting(E_ERROR);
  * @see html.tpl.php
  */
 ?>
-<div id="page-wrapper"><div id="page">
+<div id="page-wrapper">
 
 
-        <?php if ($main_menu): ?>
-            <div id="main-menu" class="navigation">
-                <div id="menu-bar">open</div>
+    <?php if ($main_menu): ?>
+        <div id="main-menu" class="navigation">
+            <div id="menu-bar">open</div>
 
-                <?php print theme('links__system_main_menu', array(
-                    'links' => $main_menu,
-                    'attributes' => array(
-                        'id' => 'main-menu-links',
-                        'class' => array('links', 'clearfix'),
-                    ),
-                    'heading' => array(
-                        'text' => t('Main menu'),
-                        'level' => 'h2',
-                        'class' => array('element-invisible'),
-                    ),
-                )); ?>
-            </div> <!-- /#main-menu -->
-        <?php endif; ?>
+            <?php print theme('links__system_main_menu', array(
+                'links' => $main_menu,
+                'attributes' => array(
+                    'id' => 'main-menu-links',
+                    'class' => array('links', 'clearfix'),
+                ),
+                'heading' => array(
+                    'text' => t('Main menu'),
+                    'level' => 'h2',
+                    'class' => array('element-invisible'),
+                ),
+            )); ?>
+        </div> <!-- /#main-menu -->
+    <?php endif; ?>
+
+
+
+    <div id="page">
+
 
 
 

@@ -26,21 +26,33 @@ h6 {
   border: 0;
   background: inherit;
 }
-#page {
+#page,
+#page-wrapper {
   position: relative;
 }
 #main-menu {
   height: 100%;
   width: 15em;
   border: red 1px solid;
-  left: -15em;
-  position: absolute;
+  left: -12em;
+  position: fixed;
   overflow-y: hidden;
+  z-index: 100;
 }
 #main-menu.open {
   left: 0;
 }
+#main-menu ul {
+  position: absolute;
+  left: 0;
+  width: 12em;
+}
 #main-menu #menu-bar {
   display: block;
   position: absolute;
+  width: 3em;
+  background: red;
+  height: 3em;
+  right: 0;
+  top: 0;
 }
