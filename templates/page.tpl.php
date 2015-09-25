@@ -94,7 +94,11 @@ error_reporting(E_ERROR);
 
     <?php if ($main_menu): ?>
         <div id="main-menu" class="navigation">
-            <div id="menu-bar">open</div>
+            <div id="menu-bar">
+                <div class="menu-button-open"><img src="<?php print $base_path . $directory; ?>/images/menu-open.svg"></div>
+                <div class="menu-button-close"><img src="<?php print $base_path . $directory; ?>/images/menu-close.svg"></div>
+            </div>
+
 
             <?php print theme('links__system_main_menu', array(
                 'links' => $main_menu,
@@ -154,7 +158,7 @@ error_reporting(E_ERROR);
 
     <?php print render($page['header']); ?>
 
-    <?php if ($secondary_menu): ?>
+    <?php /*if ($secondary_menu): ?>
       <div id="secondary-menu" class="navigation">
         <?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
@@ -169,7 +173,7 @@ error_reporting(E_ERROR);
           ),
         )); ?>
       </div> <!-- /#secondary-menu -->
-    <?php endif; ?>
+    <?php endif; */?>
 
   </div></div> <!-- /.section, /#header -->
 
@@ -187,9 +191,10 @@ error_reporting(E_ERROR);
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
-    <?php if ($breadcrumb): ?>
+
+    <?php /*if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php endif; */?>
 
 
     <div id="content" class="column"><div class="section">
@@ -234,13 +239,6 @@ error_reporting(E_ERROR);
 
   </div></div> <!-- /#main, /#main-wrapper -->
 
-  <?php if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']): ?>
-    <div id="triptych-wrapper"><div id="triptych" class="clearfix">
-      <?php print render($page['triptych_first']); ?>
-      <?php print render($page['triptych_middle']); ?>
-      <?php print render($page['triptych_last']); ?>
-    </div></div> <!-- /#triptych, /#triptych-wrapper -->
-  <?php endif; ?>
 
   <div id="footer-wrapper"><div class="section">
 

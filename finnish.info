@@ -6,7 +6,6 @@ version = VERSION
 core = 7.x
 
 stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/extras.css
 stylesheets[print][] = css/print.css
@@ -20,13 +19,11 @@ regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 
 regions[featured] = Featured
+
 regions[content] = Content
+
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-
-regions[triptych_first] = Triptych first
-regions[triptych_middle] = Triptych middle
-regions[triptych_last] = Triptych last
 
 regions[footer_firstcolumn] = Footer first column
 regions[footer_secondcolumn] = Footer second column

@@ -8,7 +8,7 @@ body,
 }
 #page-wrapper {
   min-height: 100%;
-  min-width: 960px;
+  /*min-width: 960px;*/
 }
 #header div.section,
 #featured div.section,
@@ -17,9 +17,9 @@ body,
 #triptych,
 #footer-columns,
 #footer {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  /*width: 960px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
 }
 #header div.section {
   position: relative;
@@ -41,8 +41,6 @@ body,
   width: 480px;
 }
 #content,
-#sidebar-first,
-#sidebar-second,
 .region-triptych-first,
 .region-triptych-middle,
 .region-triptych-last,
@@ -54,24 +52,24 @@ body,
   float: left;
   position: relative;
 }
-#sidebar-first,
-#sidebar-second {
-    float: none;
-}
+/*#sidebar-first,*/
+/*#sidebar-second {*/
+    /*float: none;*/
+/*}*/
 .one-sidebar #content {
   width: 720px;
 }
-.two-sidebars #content {
-  width: 480px;
-}
+/*.two-sidebars #content {*/
+  /*width: 480px;*/
+/*}*/
 .no-sidebars #content {
   width: 960px;
   float: none;
 }
-#sidebar-first,
-#sidebar-second {
-  width: 240px;
-}
+/*#sidebar-first,*/
+/*#sidebar-second {*/
+  /*width: 240px;*/
+/*}*/
 #main-wrapper {
   min-height: 300px;
 }
@@ -89,7 +87,7 @@ body,
   width: 280px;
 }
 #footer-wrapper {
-  padding: 35px 5px 30px;
+  /*padding: 35px 5px 30px;*/
 }
 .region-footer-firstcolumn,
 .region-footer-secondcolumn,
@@ -99,7 +97,7 @@ body,
   width: 220px;
 }
 #footer {
-  width: 940px;
-  min-width: 920px;
+  /*width: 940px;*/
+  /*min-width: 920px;*/
 }
 

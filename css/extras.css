@@ -1,3 +1,6 @@
+body {
+  color: #333;
+}
 #sidebar-first,
 #sidebar-second,
 h1,
@@ -15,44 +18,161 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  color: #bb394c;
+}
+#main {
+  position: relative;
+}
+#page {
+  padding: 0 1em 1.5em;
+}
+@media (min-width: 50em) and (max-width: 60em) {
+  .two-sidebars #content {
+    max-width: 30em;
+  }
+  .two-sidebars .sidebars {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@media (min-width: 60em) {
+  .two-sidebars #content {
+    width: 50%;
+  }
+  .two-sidebars .sidebars {
+    width: 50%;
+  }
+  .two-sidebars .sidebars .sidebar {
+    box-sizing: border-box;
+    margin: 0 5%;
+    float: left;
+    width: 40%;
+  }
+}
+#content {
+  max-width: 40em;
 }
 .sidebars {
   float: left;
-  width: 300px;
+  display: block;
+  padding-top: 2em;
+}
+.sidebars .sidebar {
   display: block;
   background: #f0f0f0;
+  border-bottom: 3px solid #2a6d8d;
+  margin-bottom: 2em;
+}
+.sidebars .menu li.leaf {
+  list-style-image: none;
+  list-style-type: disc !important;
+  color: #2a6d8d;
 }
 .sidebar .block {
   border: 0;
   background: inherit;
 }
-#page,
 #page-wrapper {
   position: relative;
+  padding-left: 3em;
+  width: 100%;
+  box-sizing: border-box;
 }
 #main-menu {
   height: 100%;
-  width: 15em;
-  border: red 1px solid;
-  left: -12em;
+  width: 20em;
+  background: #2a6d8d;
+  left: -17em;
   position: fixed;
   overflow-y: hidden;
   z-index: 100;
+  transition: 0.25s ease-in-out left;
 }
 #main-menu.open {
   left: 0;
 }
+#main-menu.open #menu-bar .menu-button-close {
+  display: block;
+}
+#main-menu.open #menu-bar .menu-button-open {
+  display: none;
+}
 #main-menu ul {
   position: absolute;
   left: 0;
-  width: 12em;
+  top: 1em;
+  width: 17em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#main-menu ul li {
+  padding: 0;
+}
+#main-menu ul li a {
+  color: white;
+  font-family: "adelle", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: block;
+  padding: 0.5em 1em;
+}
+#main-menu ul li.active a {
+  color: #daa;
 }
 #main-menu #menu-bar {
   display: block;
   position: absolute;
   width: 3em;
-  background: red;
   height: 3em;
   right: 0;
   top: 0;
+}
+#main-menu #menu-bar .menu-button-close,
+#main-menu #menu-bar .menu-button-open {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+#main-menu #menu-bar .menu-button-close img,
+#main-menu #menu-bar .menu-button-open img {
+  color: white;
+  fill: white;
+  display: block;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+}
+#main-menu #menu-bar > .menu-button-close {
+  display: none;
+}
+#header {
+  font-family: "adelle", serif;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+#header #site-name {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#header #site-name a {
+  font-weight: bold;
+  color: #2a6d8d;
+}
+#footer-wrapper {
+  color: #333;
+  display: block;
+  background: #f0f0f0;
+  border-bottom: 3px solid #2a6d8d;
+  padding: 0 2em 2em;
+}
+#footer-wrapper a {
+  color: #33f;
 }

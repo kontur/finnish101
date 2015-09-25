@@ -1,4 +1,8 @@
 
+body {
+    color: #333;
+}
+
 #sidebar-first,
 #sidebar-second,
 h1,
@@ -17,13 +21,79 @@ h4,
 h5,
 h6 {
     font-weight: bold;
+    color: #bb394c;
+}
+
+#main {
+    position: relative;
+}
+
+#page {
+    padding: 0 1em 1.5em;
+}
+
+.two-sidebars {
+
+    @media(min-width: 50em) and (max-width: 60em) {
+        #content {
+            max-width: 30em;
+        }
+        .sidebars {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    @media(min-width: 60em) {
+
+        #content {
+            width: 50%;
+        }
+        .sidebars {
+            width: 50%;
+
+            .sidebar {
+                box-sizing: border-box;
+                margin: 0 5%;
+                float: left;
+                width: 40%;
+            }
+        }
+
+
+    }
+}
+
+
+#content {
+    max-width: 40em;
 }
 
 .sidebars {
     float: left;
-    width: 300px;
+//    width: 300px;
     display: block;
-    background: #f0f0f0;
+    padding-top: 2em;
+
+    .sidebar {
+        display: block;
+        background: #f0f0f0;
+        border-bottom: 3px solid #2a6d8d;
+        margin-bottom: 2em;
+    }
+
+
+
+    .menu {
+        li.leaf {
+            list-style-image: none;
+            list-style-type: disc !important;
+            color: #2a6d8d;
+            a {
+
+            }
+        }
+    }
 }
 
 .sidebar .block {
@@ -31,36 +101,123 @@ h6 {
     background: inherit;
 }
 
-#page,
 #page-wrapper {
     position: relative;
+    padding-left: 3em;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+@menuWidth: 20em;
 
 #main-menu {
     height: 100%;
-    width: 15em;
-    border: red 1px solid;
-    left: -12em;
+    width: @menuWidth;
+    background: #2a6d8d;//#bb394c;
+    left: -@menuWidth + 3em;
     position: fixed;
     overflow-y: hidden;
     z-index: 100;
 
+    transition: 0.25s ease-in-out left;
+
     &.open {
         left: 0;
+
+        #menu-bar .menu-button-close {
+            display: block;
+        }
+        #menu-bar .menu-button-open {
+            display: none;
+        }
     }
+
     ul {
         position: absolute;
         left: 0;
-        width: 12em;
+        top: 1em;
+        width: @menuWidth - 3em;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            a {
+                color: white;
+                font-family: "adelle", "Times New Roman", Times, serif;
+                font-weight: bold;
+                font-size: 1.5em;
+                display: block;
+                padding: 0.5em 1em;
+            }
+
+            &.active {
+                a {
+                    color: #daa;
+                }
+            }
+        }
     }
 
     #menu-bar {
         display: block;
         position: absolute;
         width: 3em;
-        background: red;
         height: 3em;
         right: 0;
         top: 0;
+
+
+        .menu-button-close,
+        .menu-button-open {
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1em;
+            right: 0;
+
+            img {
+                color: white;
+                fill: white;
+                display: block;
+                width: 50%;
+                top: 25%;
+                left: 25%;
+                position: absolute;
+            }
+        }
+
+        & > .menu-button-close {
+            display: none;
+        }
+    }
+}
+
+
+#header {
+    font-family: "adelle", serif;
+    padding-top: 1em;
+    padding-left: 1em;
+    #site-name {
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        a {
+            font-weight: bold;
+            color: #2a6d8d;
+        }
+    }
+}
+
+#footer-wrapper {
+    color: #333;
+    display: block;
+    background: #f0f0f0;
+    border-bottom: 3px solid #2a6d8d;
+    padding: 0 2em 2em;
+    a {
+        color: #33f;
     }
 }
